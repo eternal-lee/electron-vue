@@ -1,0 +1,68 @@
+{
+  "name": "electron-vue",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron/main.js",
+  "scripts": {
+    "electron:serve": "concurrently -k \"npm run serve\" \"npm run electron\"",
+    "electron:build": "npm run build && electron-builder",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "electron": "wait-on tcp:8080 && cross-env NODE_ENV=development electron ."
+  },
+  "build": {
+    "productName": "electron-vue",
+    "copyright": "Copyright @ 2023 *",
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ]
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-standard": "^6.1.0",
+    "concurrently": "^8.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^24.2.0",
+    "electron-builder": "^23.6.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "less": "^4.0.0",
+    "less-loader": "^8.0.0",
+    "wait-on": "^7.0.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "@vue/standard"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
