@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/build/icons/icon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electron + Vue3</title>
+    <style>
+      /* 全局样式 */
+      body {
+        scrollbar-width: thin; /* Firefox不支持此属性 */
+      }
+
+      /* 滚动条样式 */
+      ::-webkit-scrollbar {
+        width: 8px; /* 滚动条宽度 */
+        background-color: var(--scrollbar-track); /* 滚动条背景色 */
+      }
+
+      /* 滑块样式 */
+      ::-webkit-scrollbar-thumb {
+        border-radius: 4px; /* 滑块边界圆角 */
+        background-color: var(--scrollbar-thumb); /* 滑块颜色 */
+      }
+
+      /* 滑块样式 */
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--scrollbar-track-hover); /* 滑块颜色 */
+      }
+
+      /* 轨道样式 */
+      ::-webkit-scrollbar-track {
+        border-radius: 4px; /* 轨道边界圆角 */
+        background-color: var(--scrollbar-track); /* 轨道颜色 */
+      }
+
+      /* 按钮样式 */
+      ::-webkit-scrollbar-button {
+        display: none; /* 隐藏按钮 */
+      }
+
+      /* 角落样式 */
+      ::-webkit-scrollbar-corner {
+        display: none; /* 隐藏角落 */
+      }
+
+      /* 调节大小手柄样式 */
+      ::-webkit-resizer {
+        display: none; /* 隐藏调节大小手柄 */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
